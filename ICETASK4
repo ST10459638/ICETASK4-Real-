@@ -1,0 +1,34 @@
+package com.mycompany.icetask4;
+
+import java.util.Scanner;
+public class ICETask4
+{
+ public static void main(String[] args)
+ {
+ final int SALESPEOPLE = 5;
+ int[] sales = new int[SALESPEOPLE];
+ int max=Math.max(SALESPEOPLE,SALESPEOPLE); 
+ int min=Math.min(SALESPEOPLE,SALESPEOPLE);
+ int sum;
+ Scanner scan = new Scanner(System.in);
+ for (int i=0; i<sales.length; i++)
+ {
+ System.out.print("Enter sales for salesperson " + i + ": ");
+ sales[i] = scan.nextInt();
+ }
+ System.out.println("\nSalesperson Sales");
+ System.out.println("--------------------");
+ sum = 0;
+ for (int i=0; i<sales.length; i++)
+ {
+ System.out.println(" " + i + " " + sales[i]);
+ sum += sales[i];
+ }
+ System.out.println("\nTotal sales: " + sum);
+ System.out.println("Average sales:" + sum/(float)SALESPEOPLE);
+ System.out.println("Maximum of sales:" + max);
+ System.out.println("Minimum of sales:" + min);
+ }
+    }
+// https://www.tutorialspoint.com/Java-program-to-calculate-the-average-of-numbers-in-Java //
+// https://ioflood.com/blog/math-max-java/#:~:text=max()%20function%20in%20Java%20is%20a%20static%20method%20that,the%20maximum%20of%20two%20numbers. //
